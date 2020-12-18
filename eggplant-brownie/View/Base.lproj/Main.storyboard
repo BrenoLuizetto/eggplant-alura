@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-1410" y="133"/>
         </scene>
-        <!--Refeicoes Table View Controller-->
+        <!--Minhas Refeições-->
         <scene sceneID="8bA-82-WVj">
             <objects>
                 <tableViewController id="hxI-dl-Pil" customClass="RefeicoesTableViewController" customModule="eggplant_brownie" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,13 @@
                             <outlet property="delegate" destination="hxI-dl-Pil" id="a6e-CT-Gei"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pZS-9r-fBo"/>
+                    <navigationItem key="navigationItem" title="Minhas Refeições" id="pZS-9r-fBo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rwh-XJ-Td0">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="oGw-4B-laU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH9-lK-tI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
