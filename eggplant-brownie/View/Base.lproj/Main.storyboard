@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hxI-dl-Pil">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AoW-rd-mm8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Rl1-Sw-7LX">
+            <objects>
+                <navigationController id="AoW-rd-mm8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wsj-13-VNy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hxI-dl-Pil" kind="relationship" relationship="rootViewController" id="bQ6-wu-UQ3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bph-ZY-HX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1410" y="133"/>
+        </scene>
         <!--Refeicoes Table View Controller-->
         <scene sceneID="8bA-82-WVj">
             <objects>
@@ -33,6 +49,7 @@
                             <outlet property="delegate" destination="hxI-dl-Pil" id="a6e-CT-Gei"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="pZS-9r-fBo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH9-lK-tI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
