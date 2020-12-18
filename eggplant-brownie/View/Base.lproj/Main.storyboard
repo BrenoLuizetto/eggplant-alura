@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Minhas Refeições" id="pZS-9r-fBo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rwh-XJ-Td0">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="oGw-4B-laU"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="Adicionar" id="oGw-4B-laU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
