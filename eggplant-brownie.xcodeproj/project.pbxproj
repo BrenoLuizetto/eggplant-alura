@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F12F6C28258D081C007C9394 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12F6C27258D081C007C9394 /* Refeicao.swift */; };
 		F12F6C2A258D0918007C9394 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12F6C29258D0918007C9394 /* Item.swift */; };
+		F1469AF1258D210C0091F562 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1469AF0258D210C0091F562 /* RefeicoesTableViewController.swift */; };
 		F14BB76A258A60590093827D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BB769258A60590093827D /* AppDelegate.swift */; };
 		F14BB76C258A60590093827D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BB76B258A60590093827D /* ViewController.swift */; };
 		F14BB76F258A60590093827D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14BB76D258A60590093827D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		F12F6C27258D081C007C9394 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		F12F6C29258D0918007C9394 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F1469AF0258D210C0091F562 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 		F14BB766258A60590093827D /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14BB769258A60590093827D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14BB76B258A60590093827D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				F14BB76B258A60590093827D /* ViewController.swift */,
+				F1469AF0258D210C0091F562 /* RefeicoesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				F12F6C2A258D0918007C9394 /* Item.swift in Sources */,
 				F14BB76C258A60590093827D /* ViewController.swift in Sources */,
+				F1469AF1258D210C0091F562 /* RefeicoesTableViewController.swift in Sources */,
 				F12F6C28258D081C007C9394 /* Refeicao.swift in Sources */,
 				F14BB76A258A60590093827D /* AppDelegate.swift in Sources */,
 			);
