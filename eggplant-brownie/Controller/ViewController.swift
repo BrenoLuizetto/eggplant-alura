@@ -8,17 +8,21 @@
 
 import UIKit
 
-protocol ViewControllerDelegate{
+protocol AdicionaRefeicaoDelegate{
     func add(_ refeicao: Refeicao)
 }
 
 class ViewController: UIViewController {
+    //MARK: - Atributos
+    var delegate: AdicionaRefeicaoDelegate?
     
-    var delegate: ViewControllerDelegate?
-    
+    //MARK: - IBOutlets
+
    @IBOutlet var nomeTextField: UITextField?
     @IBOutlet var felicidadeTextField: UITextField?
     
+    //MARK: - IBAction
+
     @IBAction func adicionar(_ sender: Any) {
         
 //        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text{
