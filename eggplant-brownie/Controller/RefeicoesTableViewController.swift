@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RefeicoesTableViewController: UITableViewController{
+class RefeicoesTableViewController: UITableViewController, ViewControllerDelegate{
     
     var refeicoes = [Refeicao(nome: "macarrao", felicidade: 4),
                      Refeicao(nome: "arroz", felicidade: 3),
@@ -38,9 +38,9 @@ class RefeicoesTableViewController: UITableViewController{
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "adicionar"{
+        if segue.identifier == "Adicionar"{
             if let viewController = segue.destination as? ViewController{
-                viewController.tableViewController = self
+                viewController.delegate = self
             }
         }
     }
