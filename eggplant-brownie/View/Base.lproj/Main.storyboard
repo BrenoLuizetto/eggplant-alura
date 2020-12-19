@@ -134,6 +134,7 @@
                     </view>
                     <connections>
                         <outlet property="felicidadeTextField" destination="m2P-Ta-odm" id="e05-ac-qJ1"/>
+                        <outlet property="itensTableView" destination="R5v-uU-sXD" id="ZyS-YX-YR7"/>
                         <outlet property="nomeTextField" destination="CKe-oF-Vb6" id="M1a-qk-3td"/>
                     </connections>
                 </viewController>
