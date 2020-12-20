@@ -93,35 +93,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
-    
-    //MARK: - IBAction
-
-    @IBAction func adicionar(_ sender: Any) {
-        
-//        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text{
-//            let nome = nomeDaRefeicao
-//
-//            if let felicidade = Int(felicidadeDaRefeicao){
-//
-//                let refeicao = Refeicao(nome: nome, felicidade: felicidade)
-//
-//        print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-//            }else{
-//                print("erro")
-//            }
-//        }
-        
+    func recuperaRefeicaoDoFormulario() -> Refeicao?{
         guard let nomeDaRefeicao = nomeTextField?.text else{
-            return
+            return nil
         }
         
         guard let felicidadeDaRefeicao = felicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else{
-            return
+            return nil
         }
         
         let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
         
-        print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+        return refeicao
+    }
+    //MARK: - IBAction
+
+    @IBAction func adicionar(_ sender: Any) {
+        
+        guard let refeicao = recuperaRefeicaoDoFormulario() else{
+            Alerta(controller: self).exibe(mensagem: "Não foi possivel criar refeição")
+            return
+        }
         
         delegate?.add(refeicao)
         
