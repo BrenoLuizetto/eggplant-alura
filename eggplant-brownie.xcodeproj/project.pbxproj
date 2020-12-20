@@ -53,6 +53,7 @@
 			children = (
 				F12F6C29258D0918007C9394 /* Item.swift */,
 				F12F6C27258D081C007C9394 /* Refeicao.swift */,
+				F1A05BE5258FD98B001B9861 /* Alerta.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -71,7 +72,6 @@
 			children = (
 				F1C9BB55258E6DFE0009CE8C /* AdicionarItensViewController.swift */,
 				F14BB76B258A60590093827D /* ViewController.swift */,
-				F1A05BE5258FD98B001B9861 /* Alerta.swift */,
 				F1469AF0258D210C0091F562 /* RefeicoesTableViewController.swift */,
 			);
 			path = Controller;
