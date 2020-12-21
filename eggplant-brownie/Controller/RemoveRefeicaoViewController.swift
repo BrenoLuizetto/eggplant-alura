@@ -28,6 +28,8 @@ class removeRefeicaoViewController {
     
     let botaoRemover = UIAlertAction(title: "remover", style: .destructive, handler: handler)
         controller.present(alerta, animated: true, completion: nil)
+        
+        alerta.addAction(botaoRemover)
 }
 }
 
