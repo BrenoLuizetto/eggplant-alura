@@ -22,8 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //MARK: - Atributos
     var delegate: AdicionaRefeicaoDelegate?
-    var itens: [Item] = [Item(nome: "Molho de tomate", calorias: 50.0),
-                         Item(nome: "Molho apimentado", calorias: 35.0)]
+    var itens: [Item] = []
     var itensSelecionados: [Item] = []
     
     //MARK: - IBOutlets
@@ -37,18 +36,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         navigationItem.rightBarButtonItem = botaoAdicionaItem
         
-        do{
-            
-            guard let diretorio = recuperaDiretorio() else {return}
-            let dados = try Data(contentsOf: diretorio)
-            let itensSalvos = try
-
-            NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as! [Item]
-            
-            itens = itensSalvos
-        }catch{
-            print(error.localizedDescription)
-        }
+        recuperaItens()
+        
+    }
+    
+    func recuperaItens() {
+        itens = ItemDao().recupera()
     }
     
     @objc func adicionarItens(){
@@ -58,29 +51,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(_  item: Item){
         itens.append(item)
+        ItemDao().save(itens)
         if let tableView = itensTableView {
             tableView.reloadData()
         }else{
             Alerta(controller: self).exibe(title: "desculpe", mensagem: "não foi possivel recarregar a tabela")
         }
-        
-        
-        do{
-            let dados = try NSKeyedArchiver.archivedData(withRootObject: itens, requiringSecureCoding: false)
-            guard let caminho = recuperaDiretorio() else {return}
-            try dados.write(to: caminho )
-
-        }catch{
-            print(error.localizedDescription)
-        }
-    }
-    
-    func recuperaDiretorio() -> URL? {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else{return nil}
-        
-        let caminho = diretorio.appendingPathComponent("itens")
-        
-        return caminho
     }
 
     //MARK: - UITableViewDataSource
